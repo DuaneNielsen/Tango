@@ -14,8 +14,12 @@
  * the License.
  */
 
+apply plugin: 'java'
+apply plugin: 'catkin'
+
 task wrapper(type: Wrapper) {
-    gradleVersion = '1.12'
+    //gradleVersion = '1.12'
+    gradleVersion = '2.10'
 }
 
 buildscript {
@@ -33,13 +37,13 @@ buildscript {
         }
     }
     dependencies {
-        classpath group: 'org.ros.rosjava_bootstrap', name: 'gradle_plugins', version: '0.1.22'
-        // compile 'org.ros.tf2:tf2_ros:0.0.0-SNAPSHOT'
+       classpath group: 'org.ros.rosjava_bootstrap', name: 'gradle_plugins', version: '0.1.22'
     }
 }
 
-apply plugin: 'catkin'
-
+dependencies {
+        compile 'org.ros.tf2:tf2_ros:0.0.0-SNAPSHOT'
+}
 
 allprojects {
     /* A github url provides a good standard unique name for your project */

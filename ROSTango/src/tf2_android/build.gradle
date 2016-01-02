@@ -48,6 +48,9 @@ subprojects {
         exclude group: 'xml-apis'
     }
 
+    dependencies {
+        compile 'org.ros.rosjava_messages:tf2_msgs:0.4.7'
+    }
 
     uploadArchives {
         repositories {
