@@ -9,7 +9,7 @@ before_script:
 
 script:
   - cd ROSTango/src/rostango
-  - ./gradlew build
+  - ./gradlew assembleRelease --info
 
 android:
   components:
