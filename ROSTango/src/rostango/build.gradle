@@ -31,12 +31,12 @@ buildscript {
                 url p
             }
         }
-        mavenLocal()
+        //mavenLocal()
         maven {
             url rosMavenRepository
         }
         maven {
-            url "http://dl.bintray.com/duanenielsen/maven"
+           url "https://dl.bintray.com/duanenielsen/maven"
         }
     }
     dependencies {
@@ -45,7 +45,8 @@ buildscript {
 }
 
 dependencies {
-        compile 'org.ros.tf2:tf2_ros:0.0.0-SNAPSHOT'
+        compile 'org.ros.tf2:tf2_ros:1.0.1'
+        compile 'org.ros.rosjava:tf2_msgs:0.4.7'
 }
 
 allprojects {
